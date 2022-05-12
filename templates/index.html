@@ -198,9 +198,9 @@
 			<div class="row no-gutters align-items-center">
 				<div class="col-auto mr-auto">
 					<ul class="tt-box-info">
-						<li><i class="icon-149984"></i>3261 Anmoore Road, Brooklyn, NY 11230</li>
-						<li><a href="#"><i class="icon-15874"></i><strong>Call Us:</strong> +01 123 456 78</a></li>
-						<li><i class="icon-icon"></i>9:00 AM – 8:00 PM</li>
+						<li><i class="icon-149984"></i>{{ home.address }}</li>
+						<li><a href="#"><i class="icon-15874"></i><strong>Call Us:</strong>{{ home.tel }}</a></li>
+						<li><i class="icon-icon"></i>{{ home.work_time }}</li>
 					</ul>
 				</div>
 				<div class="col-auto">
@@ -307,8 +307,8 @@
 				<!--logo-->
 				<div class="col-logo">
 					<a class="tt-logo" href="index.html">
-						<img class="tt-logo-light svg-img" src="{% static 'images/logo.svg' %}" alt="">
-						<img class="tt-logo-dark svg-img" src="{% static 'images/logo-dark.svg' %}" alt="">
+						<img class="tt-logo-light svg-img" src="{{ home.logo.url }}" alt="">
+						<img class="tt-logo-dark svg-img" src="{{ home.logo.url }}" alt="">
 					</a>
 				</div>
 				<!--desctope-menu-->
