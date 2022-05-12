@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     #apps
     'apps.settings',
+    'apps.categories',
+    'apps.cars',
 ]
 
 MIDDLEWARE = [
