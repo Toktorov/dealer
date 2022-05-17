@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>CarLeader - Responsive HTML5 Template</title>
-	<meta name="keywords" content="HTML5 Template">
-	<meta name="description" content="CarLeader - Responsive HTML5 Template">
-	<link rel="shortcut icon" href="favicon.ico">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
-</head>
-<body>
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
 <div class="tt-colorswatch">
 	<div class="tt-colorswatch-options">
 		<a href="#" class="colorswatch1 active js-swatch-color"></a>
@@ -191,186 +179,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- panel-info -->
-	<div class="tt-panel-info">
-		<div class="container">
-			<div class="row no-gutters align-items-center">
-				<div class="col-auto mr-auto">
-					<ul class="tt-box-info">
-						<li><i class="icon-149984"></i>3261 Anmoore Road, Brooklyn, NY 11230</li>
-						<li><a href="#"><i class="icon-15874"></i><strong>Call Us:</strong> +01 123 456 78</a></li>
-						<li><i class="icon-icon"></i>9:00 AM – 8:00 PM</li>
-					</ul>
-				</div>
-				<div class="col-auto">
-					<div class="tt-language">
-						<div class="tt-skinSelect-02">
-							<select class="tt-select">
-								<option value="ENG">ENG</option>
-								<option value="RUS">RUS</option>
-							</select>
-						</div>
-					</div>
-					<div class="tt-dropdown-obj tt-searcher">
-						<a href="#" class="tt-dropdown-toggle">
-							<i class="icon-musica-searcher"></i>
-						</a>
-						<div class="tt-dropdown-menu">
-							<div class="container">
-								<form>
-									<div class="tt-row-search">
-										<input type="text" class="tt-search-input" placeholder="Type your search request...">
-										<button class="tt-btn-search" type="submit"></button>
-										<button class="tt-btn-close icon-g-80"></button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="tt-dropdown-obj tt-account">
-						<a href="#" class="tt-dropdown-toggle">
-							<i class="icon-user"></i>
-						</a>
-						<div class="tt-dropdown-menu">
-							<div class="tt-row-close">
-								<a href="#" class="tt-btn-close icon-close"></a>
-							</div>
-							<ul>
-							    <li><a href="#">Account</a></li>
-							    <li><a href="#">Check Out</a></li>
-							    <li><a href="#">Sign In</a></li>
-							    <li><a href="#">Sign Out</a></li>
-							    <li><a href="#">Register</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="tt-dropdown-obj tt-compare compare-toggle">
-						<a href="#" class="tt-dropdown-toggle">
-							<i class="icon-compare"></i>
-						</a>
-					</div>
-					<div class="tt-dropdown-obj tt-cart">
-						<a href="#" class="tt-dropdown-toggle">
-							<i class="icon-cart"></i>
-						</a>
-						<div class="tt-dropdown-menu">
-							<h6 class="tt-dropdown-title">
-								<a href="#" class="tt-btn-close icon-close"></a>
-								Products in Cart
-							</h6>
-							<div class="tt-search-results">
-								<ul>
-									<li>
-							            <a href="inventory-item.html">
-							            	<div class="thumbnail"><img src="images/product/product_img_05.jpg" alt=""></div>
-							            	<div class="tt-description">
-							            		<div class="tt-title">Bosch 3330 Premium FILTECH Oil </div>
-							            		<div class="tt-price">
-													$5.23
-												</div>
-							            	</div>
-							            </a>
-							            <span class="tt-close-item icon-close"></span>
-							        </li>
-							        <li>
-							            <a href="inventory-item.html">
-							            	<div class="thumbnail"><img src="images/product/product_img_08.jpg" alt=""></div>
-							            	<div class="tt-description">
-							            		<div class="tt-title">Autolite XP5325 Iridium XP Spark Plug, Pack of 4</div>
-							            		<div class="tt-price">
-													$24.61
-												</div>
-							            	</div>
-							            </a>
-							            <span class="tt-close-item icon-close"></span>
-							        </li>
-								</ul>
-							</div>
-							<div class="tt-search-bottom">
-								<div class="price-total">
-									<label>Total:</label>
-									<div class="tt-price">$29.84</div>
-								</div>
-								<a href="#" class="btn">CHECKOUT</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- header-holder -->
-<div class="header-holder">
-		<div class="container">
-			<div class="row">
-				<!--logo-->
-				<div class="col-logo">
-					<a class="tt-logo" href="index.html">
-						<img class="tt-logo-light svg-img" src="images/logo.svg" alt="">
-						<img class="tt-logo-dark svg-img" src="images/logo-dark.svg" alt="">
-					</a>
-				</div>
-				<!--desctope-menu-->
-				<div class="col-menu col-auto mr-auto ">
-					<div class="tt-desctop-menu" id="tt-desctop-menu">
-						<nav>
-							<ul>
-								<li>
-									<a href="index.html">HOME</a>
-									<ul>
-										<li><a href="index-moto.html">Moto Leader</a></li>
-										<li><a href="index-yacht.html">Yacht Leader</a></li>
-									</ul>
-								</li>
-								<li class="is-subMenu">
-									<a href="about-us.html">ABOUT US</a>
-									<ul>
-										<li><a href="about-us-testimonials.html">TESTIMONIALS</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="services.html">SERVICES</a>
-									<ul>
-										<li><a href="services-item.html">Pre-Sale Preparation</a></li>
-									</ul>
-								</li>
-								<li class="is-subMenu">
-									<a href="inventory.html">INVENTORY</a>
-									<ul>
-										<li><a href="inventory.html">With Left Sidebar</a></li>
-										<li><a href="inventory-no-sidebar.html">No sidebar</a></li>
-										<li><a href="inventory-item.html">Single product</a></li>
-										<li><a href="inventory-item02.html">Single product 02</a></li>
-									</ul>
-								</li>
-								<li class="is-subMenu">
-									<a href="blog-right-column.html">BLOG</a>
-									<ul>
-										<li><a href="blog-right-column.html">With Right Sidebar</a></li>
-										<li><a href="blog-masonry-col-3.html">Three Colums</a></li>
-										<li><a href="blog-single-post.html">Single Post</a></li>
-									</ul>
-								</li>
-								<li><a href="shop.html">SHOP</a></li>
-								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="contact.html">CONTACTS</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<!--btn toggle modal-->
-				<div class="col-btn-toggle-modal col-auto">
-					<a class="btn btn-toggle-modal" href="#"  data-toggle="modal" data-target="#modalAddYourItem"><i class="icon-addcar"></i><span class="	tt-text">ADD YOUR ITEM</span>
-					</a>
-				</div>
-				<!--btn toggle mobile menu-->
-				<div class="col-menu-toggle col-auto">
-					<a href="#" class="tt-menu-toggle icon-menu"></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- stuck nav -->
+	{% include 'include/header.html' %}
 	<div id="tt-stuck">
 		<div class="container">
 			<div class="tt-stuck-row">
@@ -384,7 +193,7 @@
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="#">inventory</a></li>
-			<li>2015 Mercedes-Benz C-Class</li>
+			<li>{{ car.brand }} {{ car.model }}</li>
 		</ul>
 	</div>
 </div>
@@ -395,7 +204,7 @@
 				<div class="col-12 col-md-8">
 					<a href="inventory.html" class="tt-link-back">RETURN TO INVENTORY</a>
 					<div class="tt-title-single">
-						<h1 class="tt-title">2015 Mersedes-Bens C-Class</h1>
+						<h1 class="tt-title">{{car.year}} {{ car.brand }} {{ car.model }}</h1>
 						<div class="tt-description">C 300 4MATIC 4dr Sedan AWD (2.0L 4cyl Turbo 7A)</div>
 					</div>
 					<div class="tt-aside-btn visible-xs">
@@ -405,10 +214,10 @@
 					<!-- mobile product slider  -->
 					<div class="tt-mobile-product-layout visible-xs">
 						<div class="tt-mobile-product-slider arrow-location-center slick-animated-show-js">
-							<div><img src="images/product_02/product_03.jpg" alt=""></div>
-							<div><img src="images/product_02/product_03_02.jpg" alt=""></div>
-							<div><img src="images/product_02/product_03_03.jpg" alt=""></div>
-							<div><img src="images/product_02/product_03_04.jpg" alt=""></div>
+							<div><img src="{% static 'images/product_02/product_03.jpg' %}" alt=""></div>
+							<div><img src="{% static 'images/product_02/product_03_02.jpg' %}" alt=""></div>
+							<div><img src="{% static 'images/product_02/product_03_03.jpg' %}" alt=""></div>
+							<div><img src="{% static 'images/product_02/product_03_04.jpg' %}" alt=""></div>
 							<div>
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/bQz2Er3K8t8" allowfullscreen></iframe>
@@ -431,15 +240,15 @@
 								<span class="tt-label-promo">Great Deal!</span>
 							</div>
 							<div>
-								<img class="zoom-product" src='images/product_02/product_03.jpg' data-zoom-image="images/product_02/product_03.jpg" alt="">
+								<img class="zoom-product" src="{{ car.car_image.url }}" data-zoom-image="{{ car.car_image.url }}" alt="">
 							</div>
 						</div>
 						<div class="product-images-carousel">
 							<ul id="smallGallery" class="tt-arrow-center-small slick-animated-show-js">
-								<li><a class="zoomGalleryActive" href="#" data-image="images/product_02/product_03.jpg" data-zoom-image="images/product_02/product_03.jpg"><img src="images/product_02/product_03.jpg" alt="" /></a></li>
-								<li><a href="#" data-image="images/product_02/product_03_02.jpg" data-zoom-image="images/product_02/product_03_02.jpg"><img src="images/product_02/product_03_02.jpg" alt="" /></a></li>
-								<li><a href="#" data-image="images/product_02/product_03_03.jpg" data-zoom-image="images/product_02/product_03_03.jpg"><img src="images/product_02/product_03_03.jpg" alt="" /></a></li>
-								<li><a href="#" data-image="images/product_02/product_03_04.jpg" data-zoom-image="images/product_02/product_03_04.jpg"><img src="images/product_02/product_03_04.jpg" alt="" /></a></li>
+								<li><a class="zoomGalleryActive" href="#" data-image="{{ car.car_image.url }}" data-zoom-image="{{ car.car_image.url }}"><img src="{{ car.car_image.url }}" alt="" /></a></li>
+								<li><a href="#" data-image="{{ car.car_image.url }}" data-zoom-image="{{ car.car_image.url }}"><img src="{{ car.car_image.url }}" alt="" /></a></li>
+								<li><a href="#" data-image="{{ car.car_image.url }}" data-zoom-image="{{ car.car_image.url }}"><img src="{{ car.car_image.url }}" alt="" /></a></li>
+								<li><a href="#" data-image="{{ car.car_image.url }}" data-zoom-image="{{ car.car_image.url }}"><img src="{{ car.car_image.url }}" alt="" /></a></li>
 								<li>
 									<div class="video-link-product" data-toggle="modal" data-type="youtube" data-target="#modalVideoProduct" data-value="http://www.youtube.com/embed/bQz2Er3K8t8">
 										<img src="images/product_02/product_03_05.jpg" alt="">
@@ -1342,20 +1151,4 @@
 		</div>
 	</div>
 </div>
-<script src="external/jquery/jquery.min.js"></script>
-<script src="external/bootstrap/js/bootstrap.min.js"></script>
-<script src="external/elevatezoom/jquery.elevatezoom.js"></script>
-<script src="external/slick/slick.min.js"></script>
-<script src="external/panelmenu/panelmenu.js"></script>
-<script src="external/sumoselect/jquery.sumoselect.min.js"></script>
-<script src="external/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="external/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="external/sticky/theia-sticky-sidebar.min.js"></script>
-<script src="js/main.js"></script>
-<!-- form validation and sending to mail -->
-<script src="external/form/jquery.form.js"></script>
-<script src="external/form/jquery.validate.min.js"></script>
-<script src="external/form/jquery.form-init.js"></script>
-</body>
-</html>
+{% endblock %}

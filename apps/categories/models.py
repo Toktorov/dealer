@@ -1,9 +1,11 @@
+from distutils.command.upload import upload
 from tabnanny import verbose
 from django.db import models
 
 # Create your models here.
 class Category(models.Model):
     title = models.CharField(max_length=255, verbose_name="Название", help_text="Внедорожники")
+    category_image = models.ImageField(upload_to = "category_image/", verbose_name="Изображение категории")
 
     def __str__(self):
         return self.title 
