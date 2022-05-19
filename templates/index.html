@@ -547,7 +547,7 @@
 				<div class="tt-portfolio-content layout-default">
 					{% for car in random_cars %}
 					<div class="element-item sort-value-02">
-						<a class="tt-portfolio-item" href="inventory-item02.html">
+						<a class="tt-portfolio-item" href="{% url 'car_detail' car.slug %}">
 							<figure>
 								<img src="{{ car.car_image.url }}" alt="" style="height: 170px;">
 								<figcaption>
@@ -902,95 +902,7 @@
 		</div>
 	</div>
 </div>
-<footer id="tt-footer">
-	<div class="tt-footer-layout">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div id="tt-footer-menu">
-
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col col-auto">
-					<a class="tt-logo" href="index.html">
-						<img class="tt-logo-dark svg-img" src="images/logo.svg" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="tt-row-custom">
-				<div class="tt-col">
-					<ul class="tt-list-info">
-						<li>
-							<i class="icon-149984"></i>
-							3261 Anmoore Road, Brooklyn, NY 11230
-						</li>
-						<li>
-							<a href="#">
-								<i class="icon-15874"></i>
-								+01 123 456 78
-							</a>
-						</li>
-						<li>
-							<a href="mailto:info@youremal.com">
-								<i class="icon-mail"></i>
-								info@youremal.com
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="tt-col">
-					<div class="tt-box-info">
-						<div class="tt-item">
-							<h6 class="tt-ttile"><i class="icon-icon"></i>Sales Department</h6>
-							<ul>
-								<li>Mon-Sat : 8:00am - 5:00pm</li>
-								<li>Sunday is closed</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="tt-col">
-					<div class="tt-box-info">
-						<div class="tt-item">
-							<h6 class="tt-ttile"><i class="icon-icon"></i>Service Department</h6>
-							<ul>
-								<li>Mon-Sat : 8:00am - 5:00pm</li>
-								<li>Sunday is closed</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="tt-col">
-					<div class="tt-box-info">
-						<div class="tt-item">
-							<h6 class="tt-ttile"><i class="icon-mail1"></i>NEWSLETTER</h6>
-							<form id="newsletterform" method="post" novalidate="novalidate" action="#">
-								<div class="form-group">
-									<input type="text" name="email" class="form-control" placeholder="enter your email to subscribe">
-								</div>
-								<button type="submit" class="tt-btn">SUBSCRIBE</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col col-auto">
-					<ul class="tt-social-icon">
-						<li><a href="https://www.facebook.com/" target="_blank" class="icon-226234"></a></li>
-						<li><a href="https://twitter.com"  target="_blank" class="icon-8800"></a></li>
-						<li><a href="https://www.google.com/" target="_blank" class="icon-733613"></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tt-footer-copyright">
-		<div class="container">
-			<span>&copy; Copyright 2018 Car Leader</span> <a href="#">PRIVACY POLICY</a>
-		</div>
-	</div>
-</footer>
+{% include "include/footer.html" %}
 <a href="#" id="ttBackToTop" class="tt-back-to-top">BACK TO TOP</a>
 <!-- modal (AddToCartProduct) -->
 <div class="modal fade" id="modalAddYourItem" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true">
@@ -1276,7 +1188,7 @@
 <script src="{% static 'external/sumoselect/jquery.sumoselect.min.js' %}"></script>
 <script src="{% static 'external/countdown/jquery.countto.js' %}"></script>
 <script src="{% static 'external/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-<script src="{% static 'https://maps.googleapis.com/maps/api/js?sensor=false' %}"></script>
+<!-- <script src="{% static 'https://maps.googleapis.com/maps/api/js?sensor=false' %}"></script> -->
 <script src="{% static 'js/main.js' %}"></script>
 <!-- form validation and sending to mail -->
 <script src="{% static 'external/form/jquery.form.js' %}"></script>

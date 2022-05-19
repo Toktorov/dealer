@@ -70,6 +70,7 @@ class Car(models.Model):
     vin = models.CharField(max_length=255, verbose_name="VIN номер", help_text="JTJHY7AX6H42")
     engine = models.CharField(max_length=255, verbose_name="Двигатель", help_text="V8 4.7")
     price = models.PositiveBigIntegerField(verbose_name="Цена", help_text=1200000)
+    transmission = models.ForeignKey(Transmission,on_delete=models.CASCADE,verbose_name="КОРОБКА ПЕРЕДАЧ",help_text="МЕХАНИКА")
     NEW_OR_OLD_CHOICE = (
         ('Старый', 'Старый'),   
         ('Новый', 'Новый')

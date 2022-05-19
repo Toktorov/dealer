@@ -331,7 +331,7 @@
 						</div>
 						<div class="tt-aside-promo">
 							<div class="tt-wrapper">
-								<div class="tt-value">$28,801</div>
+								<div class="tt-value">${{ car.price }}</div>
 								<p>
 									Taxes &amp; Licensing included
 								</p>
@@ -347,40 +347,40 @@
 								<table class="tt-table-options">
 									<tbody>
 										<tr>
-											<td>MILEAGE:</td>
-											<td>22,224 miles </td>
+											<td>КИЛОМЕТРАЖ:</td>
+											<td>{{ car.mileage }} </td>
 										</tr>
 										<tr>
-											<td>FUEL TYPE:</td>
-											<td>Gas</td>
+											<td>ТИП ТОПЛИВА:</td>
+											<td>{{ car.fuel_type }}</td>
 										</tr>
 										<tr>
-											<td>YEAR:</td>
-											<td>2015</td>
+											<td>ГОД:</td>
+											<td>{{ car.year }}</td>
 										</tr>
 										<tr>
-											<td>TRANSMission:</td>
-											<td>Automatic</td>
+											<td>КПП:</td>
+											<td>{{ car.transmission }}</td>
 										</tr>
 										<tr>
-											<td>Drive Type:</td>
-											<td>Front Wheel Drive</td>
+											<td>ПРИВОД:</td>
+											<td>{{ car.drive_type }}</td>
 										</tr>
 										<tr>
-											<td>Color:</td>
-											<td>Jet Black</td>
+											<td>ЦВЕТ:</td>
+											<td>{{ car.color }}</td>
 										</tr>
 										<tr>
 											<td>Int. Color:</td>
-											<td>Cabernet Premium</td>
+											<td>{{ car.color_interior }}</td>
 										</tr>
 										<tr>
 											<td>VIN:</td>
-											<td>JTJHY7AX6H42</td>
+											<td>{{ car.vin }}</td>
 										</tr>
 										<tr>
 											<td>Engine:</td>
-											<td>V6 EcoBoost TT </td>
+											<td>{{ car.engine }}</td>
 										</tr>
 										<tr>
 											<td>Stock number:</td>
@@ -446,20 +446,21 @@
 	<div class="container-indent">
 		<div class="container">
 			<div class="tt-block-title">
-				<h3 class="tt-title">You May Also Be Interested In</h3>
+				<h3 class="tt-title">Вам также может понравится</h3>
 			</div>
 			<div class="js-carousel-col-4 tt-slider-product tt-arrow-center slick-alignment-arrows">
+				{% for car in random_cars %}
 				<div>
 					<div class="tt-product-02">
 						<div class="tt-image-box">
 							<a href="inventory-item.html" class="tt-img">
-								<img src="images/product_02/product_02_img_01.jpg" alt="">
+								<img src="{{ car.car_image.url }}" alt="">
 								<span class="tt-label-location">
 									<span class="tt-label-promo">
-										Great Deal!
+										{{ car.new_or_old }}
 									</span>
 								</span>
-								<span class="tt-data">118,000 miles</span>
+								<span class="tt-data">{{ car.mileage }}</span>
 							</a>
 							<ul class="tt-icon">
 								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
@@ -469,14 +470,14 @@
 						</div>
 						<div class="tt-wrapper-description">
 							<div class="tt-box-title">
-								<h2 class="tt-title"><a href="inventory-item.html">2016 Hunday Elentra </a></h2>
+								<h2 class="tt-title"><a href="inventory-item.html"><span>{{ car.year }}</span> {{ car.brand }}</a></h2>
 								<div class="tt-description">
-									SE 4dr Sedan (1.8L 4cyl 6A)
+									{{ car.category }}
 								</div>
 							</div>
 							<div class="tt-box-price">
-								<span class="tt-text">List:</span>
-								<span class="tt-price">$10,295</span>
+								<span class="tt-text">Цена:</span>
+								<span class="tt-price">${{ car.price }}</span>
 							</div>
 							<ul class="tt-icon">
 								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
@@ -484,165 +485,12 @@
 								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
 							</ul>
 							<div class="tt-btn">
-								<a href="#" class="tt-btn-moreinfo">more info</a>
+								<a href="#" class="tt-btn-moreinfo">Узнать больше</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div>
-					<div class="tt-product-02">
-						<div class="tt-image-box">
-							<a href="inventory-item.html" class="tt-img">
-								<img src="images/product_02/product_02_img_02.jpg" alt="">
-								<span class="tt-label-location">
-									<span class="tt-label-new">
-										NEW
-									</span>
-									<span class="tt-label-info">
-										360 HP
-									</span>
-								</span>
-								<span class="tt-data">80,000 miles</span>
-							</a>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-						</div>
-						<div class="tt-wrapper-description">
-							<div class="tt-box-title">
-								<h2 class="tt-title"><a href="inventory-item.html">2018 Lehus LX 570</a></h2>
-								<div class="tt-description">
-									4dr SUV 4WD (5.7L 8cyl 8A)
-								</div>
-							</div>
-							<div class="tt-box-price">
-								<span class="tt-text">MSRP:</span>
-								<span class="tt-price">$99,625</span>
-								<span class="tt-old-price">$102,100</span>
-							</div>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-							<div class="tt-btn">
-								<a href="#" class="tt-btn-moreinfo">more info</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="tt-product-02">
-						<div class="tt-image-box">
-							<a href="inventory-item.html" class="tt-img">
-								<img src="images/product_02/product_02_img_03.jpg" alt="">
-								<span class="tt-label-location">
-									<span class="tt-label-new">
-										NEW
-									</span>
-								</span>
-								<span class="tt-data">118,000 miles</span>
-							</a>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-						</div>
-						<div class="tt-wrapper-description">
-							<div class="tt-box-title">
-								<h2 class="tt-title"><a href="inventory-item.html">2018 Volve XC60</a></h2>
-								<div class="tt-description">
-									T5 Momentum SUV 2.0L Turbo 8A
-								</div>
-							</div>
-							<div class="tt-box-price">
-								<span class="tt-text">MSRP:</span>
-								<span class="tt-price">$48,430</span>
-								<span class="tt-old-price">$51,210</span>
-							</div>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-							<div class="tt-btn">
-								<a href="#" class="tt-btn-moreinfo">more info</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="tt-product-02">
-						<div class="tt-image-box">
-							<a href="inventory-item.html" class="tt-img">
-								<img src="images/product_02/product_02_img_04.jpg" alt="">
-								<span class="tt-data">118,000 miles</span>
-							</a>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-						</div>
-						<div class="tt-wrapper-description">
-							<div class="tt-box-title">
-								<h2 class="tt-title"><a href="inventory-item.html">2014 BWM X1</a></h2>
-								<div class="tt-description">
-									xDrive28i 4dr SUV AWD (2.0L Turbo 8A)
-								</div>
-							</div>
-							<div class="tt-box-price">
-								<span class="tt-info-price">Request</span>
-							</div>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-							<div class="tt-btn">
-								<a href="#" class="tt-btn-moreinfo">more info</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="tt-product-02">
-						<div class="tt-image-box">
-							<a href="inventory-item.html" class="tt-img">
-								<img src="images/product_02/product_02_img_05.jpg" alt="">
-								<span class="tt-data">118,000 miles</span>
-							</a>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-						</div>
-						<div class="tt-wrapper-description">
-							<div class="tt-box-title">
-								<h2 class="tt-title"><a href="inventory-item.html">2009 Sebaru Imperza</a></h2>
-								<div class="tt-description">
-									2.5GT 4dr Sedan AWD 2.5L Turbo 4A
-								</div>
-							</div>
-							<div class="tt-box-price">
-								<span class="tt-text">LIST:</span>
-								<span class="tt-price">$12,450</span>
-							</div>
-							<ul class="tt-icon">
-								<li><a href="#" data-toggle="modal" data-target="#modalAddTestDrive" title="TEST-DRIVE" class="tooltip"><i class="icon-testdrive"></i></a></li>
-								<li><a href="images/product_02/product_02_img_01.jpg" title="GALLERY" class="tooltip tt-btn-zomm"><i class="icon-photo-camera"></i></a></li>
-								<li><a href="#" title="COMPARE" class="tooltip compare-toggle"><i class="icon-compare"></i></a></li>
-							</ul>
-							<div class="tt-btn">
-								<a href="#" class="tt-btn-moreinfo">more info</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
@@ -655,95 +503,7 @@
 		</div>
 	</div>
 </div>
-<footer id="tt-footer">
-	<div class="tt-footer-layout">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div id="tt-footer-menu">
-
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col col-auto">
-					<a class="tt-logo" href="index.html">
-						<img class="tt-logo-dark svg-img" src="images/logo.svg" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="tt-row-custom">
-				<div class="tt-col">
-					<ul class="tt-list-info">
-						<li>
-							<i class="icon-149984"></i>
-							3261 Anmoore Road, Brooklyn, NY 11230
-						</li>
-						<li>
-							<a href="#">
-								<i class="icon-15874"></i>
-								+01 123 456 78
-							</a>
-						</li>
-						<li>
-							<a href="mailto:info@youremal.com">
-								<i class="icon-mail"></i>
-								info@youremal.com
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="tt-col">
-					<div class="tt-box-info">
-						<div class="tt-item">
-							<h6 class="tt-ttile"><i class="icon-icon"></i>Sales Department</h6>
-							<ul>
-								<li>Mon-Sat : 8:00am - 5:00pm</li>
-								<li>Sunday is closed</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="tt-col">
-					<div class="tt-box-info">
-						<div class="tt-item">
-							<h6 class="tt-ttile"><i class="icon-icon"></i>Service Department</h6>
-							<ul>
-								<li>Mon-Sat : 8:00am - 5:00pm</li>
-								<li>Sunday is closed</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="tt-col">
-					<div class="tt-box-info">
-						<div class="tt-item">
-							<h6 class="tt-ttile"><i class="icon-mail1"></i>NEWSLETTER</h6>
-							<form id="newsletterform" method="post" novalidate="novalidate" action="#">
-								<div class="form-group">
-									<input type="text" name="email" class="form-control" placeholder="enter your email to subscribe">
-								</div>
-								<button type="submit" class="tt-btn">SUBSCRIBE</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col col-auto">
-					<ul class="tt-social-icon">
-						<li><a href="https://www.facebook.com/" target="_blank" class="icon-226234"></a></li>
-						<li><a href="https://twitter.com"  target="_blank" class="icon-8800"></a></li>
-						<li><a href="https://www.google.com/" target="_blank" class="icon-733613"></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tt-footer-copyright">
-		<div class="container">
-			<span>&copy; Copyright 2018 Car Leader</span> <a href="#">PRIVACY POLICY</a>
-		</div>
-	</div>
-</footer>
+{% include "include/footer.html" %}
 <a href="#" id="ttBackToTop" class="tt-back-to-top">BACK TO TOP</a>
 <!-- modal (AddToCartProduct) -->
 <div class="modal fade" id="modalAddYourItem" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true">
