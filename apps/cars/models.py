@@ -58,7 +58,7 @@ class DriveType(models.Model):
 
 class Car(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="Тип машины", related_name="car_category", null = True)
-    brand = models.ForeignKey(Brand, on_delete=models.CASCADE, verbose_name="Название машины", help_text="Mersedes")
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE, verbose_name="Название машины", help_text="Mersedes", related_name="cars_brand")
     model = models.ForeignKey(CarModel, on_delete=models.CASCADE, related_name="car_model", verbose_name="Модель")
     car_image = models.ImageField(upload_to = "car_image/", verbose_name="Фотография автомобиля")
     mileage = models.PositiveBigIntegerField(default=0, verbose_name="Пробег", help_text="120999")
@@ -79,7 +79,7 @@ class Car(models.Model):
     slug = models.SlugField(max_length=255, verbose_name="Слаг")
 
     def __str__(self):
-        return str(self.brand)
+        return f"{self.brand}, {self.model}, {self.category}"
 
     class Meta:
         verbose_name = "Машина"

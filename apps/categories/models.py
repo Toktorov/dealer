@@ -6,6 +6,7 @@ from django.db import models
 class Category(models.Model):
     title = models.CharField(max_length=255, verbose_name="Название", help_text="Внедорожники")
     category_image = models.ImageField(upload_to = "category_image/", verbose_name="Изображение категории")
+    slug = models.SlugField(max_length=255, verbose_name="slug")
 
     def __str__(self):
         return self.title 

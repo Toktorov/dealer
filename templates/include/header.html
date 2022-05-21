@@ -25,9 +25,9 @@
                     </a>
                     <div class="tt-dropdown-menu">
                         <div class="container">
-                            <form>
+                            <form action="{% url 'car_search' %}">
                                 <div class="tt-row-search">
-                                    <input type="text" class="tt-search-input" placeholder="Type your search request...">
+                                    <input type="text" name = "key" class="tt-search-input" placeholder="Искать...">
                                     <button class="tt-btn-search" type="submit"></button>
                                     <button class="tt-btn-close icon-g-80"></button>
                                 </div>

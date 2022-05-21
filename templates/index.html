@@ -384,11 +384,11 @@
 			<!--carusel-->
 			<div class="js-carousel tt-arrow-center-fluid tt-arrow-color02 slick-alignment-arrows" data-item="5" data-dots="true">
 				{% for category in categories %}
-				<a href="inventory.html" class="tt-media-02">
+				<a href="{% url 'category_detail' category.slug %}" class="tt-media-02">
 					<img src="{{category.category_image.url}}" alt="" style="width: 600px; height: 250px;">
 					<div class="tt-description">
-						<h5 class="tt-title">{{category.title}} <span class="tt-total">12 <sашpan>Машин</sашpan></span></h5>
-						<span class="tt-link-marker">view cars</span>
+						<h5 class="tt-title">{{category.title}} <span class="tt-total">{{ category.car_category.all.count }} <sашpan>Машин</sашpan></span></h5>
+						<span class="tt-link-marker">Подробнее</span>
 					</div>
 				</a>
 				{% endfor %}
