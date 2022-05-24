@@ -208,7 +208,7 @@
 						<div class="tt-description">C 300 4MATIC 4dr Sedan AWD (2.0L 4cyl Turbo 7A)</div>
 					</div>
 					<div class="tt-aside-btn visible-xs">
-						<a href="#" class="btn btn-color02" data-toggle="modal" data-target="#modalAddTestDrive"><i class="icon-testdrive"></i>TEST DRIVE</a>
+						<a href="#" class="btn btn-color02" data-toggle="modal" data-target="#modalAddTestDrive"><i class="icon-testdrive"></i> DRIVE</a>
 						<a href="#" class="btn btn-color02 compare-toggle"><i class="icon-compare"></i>COMPARE</a>
 					</div>
 					<!-- mobile product slider  -->
@@ -673,62 +673,15 @@
 		<div class="modal-content ">
 			<div class="modal-body modal-layout-dafault">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon-close"></span></button>
-				<h5 class="modal-title">Book a Test Drive</h5>
+				<h5 class="modal-title">Записаться на Тест-Драйв</h5>
 				<p class="tt-default-color02">
 					Please complete the form below and an we will contact you to arrange your test drive.
 				</p>
-				<form>
-					<div class="tt-form-default02">
-						<div class="form-group">
-							<input type="text" name="name" class="form-control" placeholder="Your name*">
-						</div>
-						<div class="row">
-							<div class="col-12 col-sm-6">
-								<div class="form-group">
-									<input type="email" name="name" class="form-control" placeholder="E-mail*">
-								</div>
-							</div>
-							<div class="col-12 col-sm-6">
-								<div class="form-group">
-									<input type="text" name="name" class="form-control" placeholder="Phone #">
-								</div>
-							</div>
-						</div>
-					</div>
-					<h6 class="tt-title">Preferred date and time of Test Drive</h6>
-					<div class="tt-row-calendar tt-form-default tt-skinSelect-01">
-						<input type="text" name="name" class="form-control" placeholder="12 / 12 / 2018">
-						<select class="tt-select">
-							<option value="01" disabled selected>12</option>
-							<option value="02">02</option>
-							<option value="03">03</option>
-							<option value="04">04</option>
-							<option value="05">05</option>
-							<option value="06">06</option>
-						</select>
-						<span class="tt-text-separator">:</span>
-						<select class="tt-select">
-							<option value="01" disabled selected>30</option>
-							<option value="02">02</option>
-							<option value="03">03</option>
-							<option value="04">04</option>
-							<option value="05">05</option>
-							<option value="06">06</option>
-						</select>
-					</div>
-					<ul class="list-form-column">
-						<li>
-							<div class="checkbox-group">
-								<input type="checkbox" id="checkBox12" name="checkbox" checked>
-								<label for="checkBox12">
-								<span class="check"></span>
-								<span class="box"></span>
-								I AGREE TO RECEIVE EMAILS FROM CAR LEADER
-								</label>
-							</div>
-						</li>
-					</ul>
-					<a href="#" class="btn">SUBMIT</a>
+				<form method="POST">
+
+					{% csrf_token %}
+					{{ form.as_p }}
+					<input type="submit" value="Submit" href="#" class="btn"></input>
 				</form>
 			</div>
 		</div>

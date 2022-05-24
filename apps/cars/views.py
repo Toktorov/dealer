@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from apps.cars.models import Car, Brand
+from django.shortcuts import render,redirect
+from apps.cars.models import Car, Brand,Test_drive
 from apps.settings.models import Setting
 from apps.categories.models import Category
 from django.db.models import Q
+from apps.cars.forms import Test_drive_form
 
 # Create your views here
 def car_detail(request, slug):
@@ -10,11 +11,16 @@ def car_detail(request, slug):
     car = Car.objects.get(slug = slug)
     random_cars = Car.objects.all().order_by('?')
     categories = Category.objects.all()
+    form = Test_drive_form(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
     context = {
         'home' : home, 
         'car' : car,
         'random_cars' : random_cars,
         'categories' : categories,
+        'form' : form,
     }
     return render(request, 'car_detail.html', context)
 

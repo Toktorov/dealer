@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from unicodedata import category
 from django.db import models
 from apps.categories.models import Category
@@ -84,3 +85,20 @@ class Car(models.Model):
     class Meta:
         verbose_name = "Машина"
         verbose_name_plural = "Машины"
+
+
+class Test_drive(models.Model):
+    car = models.ForeignKey(Car,on_delete=models.CASCADE,blank=True,related_name="Mashina")
+    name = models.CharField(max_length=255,help_text="Имя")
+    email = models.EmailField()
+    phone = models.CharField(max_length=255,help_text=255)     
+    date = models.DateTimeField()   
+    crated = models.DateTimeField(auto_now_add=True)
+    
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Тест драйв"
+        verbose_name_plural = "Тест Драйвы"    
